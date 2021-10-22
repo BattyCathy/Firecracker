@@ -5,6 +5,8 @@ public static final int SIZE = 5;
     public static void main(String[] args) {
 	top();
     upper();
+    lower();
+    bottom();
     }
 
     //Note: Every line (including whitespace) is 2 * SIZE + 3 characters long
@@ -100,7 +102,7 @@ public static final int SIZE = 5;
                 System.out.print("|-");
             }
             //  System.out.println("|");
-            System.out.println("|");
+            System.out.println("| ");
         }
         // call base function
 
@@ -109,12 +111,31 @@ public static final int SIZE = 5;
 
     public static void lower() {
         //for SIZE times {
+
+        for (int lines = 1; lines <= SIZE; lines++) {
             //System.out.print("|");
-        //print dots
-        //print tildas
-        //print dots
-        //print |
+            System.out.print(" |");
+            //print dots
+                // dots = lines - 1
+            //TODO: Extract dots() method
+            for (int i = 1; i <= lines - 1; i++) {
+                System.out.print(".");
+            }
+            //print tildas
+                //tildas = 2* SIZE - 2* lines + 1
+            for (int i = 2 * SIZE - 1; i >= 2 * lines - 1; i-- ) {
+                System.out.print("~");
+            }
+            //print dots
+                //TODO: Extract and call dots()
+            for (int i = 1; i <= lines - 1; i++) {
+                System.out.print(".");
+            }
+            //print |
+            System.out.println("| ");
+        }
         // print base
+        base();
     }
 
     public static void bottom() {
