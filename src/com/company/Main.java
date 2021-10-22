@@ -1,7 +1,11 @@
 package com.company;
 
+//Austin Roach
+//CS 141
+//Core topics: Creating a scalable Ascii rocket ship
+// with an emphasis on for loops, nested for loops, and scope
 public class Main {
-public static final int SIZE = 5;
+public static final int SIZE = 20;
     public static void main(String[] args) {
 	top();
     upper();
@@ -140,10 +144,37 @@ public static final int SIZE = 5;
 
     public static void bottom() {
         // for SIZE - 1 number of times {
-        // print spaces
-        // print /
-        // print |
-        // print \
-        // print spaces
+        for (int lines = 1; lines <= SIZE - 1; lines ++) {
+
+            // print spaces
+            for (int spaces = 1; spaces <= SIZE + 2 - lines; spaces++) {
+                System.out.print(" ");
+            }
+            //TODO: EXTRSCT SPACES METHOD
+
+            // print /
+
+            for (int slashes = 1; slashes <= lines - 1; slashes++) {
+                System.out.print("/");
+            }
+
+            // print |
+
+            System.out.print("|");
+
+            // print \
+
+            for (int slashes = 1; slashes <= lines - 1; slashes++) {
+                System.out.print("\\");
+            }
+
+            // print spaces
+
+            for (int spaces = 1; spaces <= SIZE + 2 - lines; spaces++) {
+                System.out.print(" ");
+            }
+
+            System.out.println();
+        }
     }
 }
