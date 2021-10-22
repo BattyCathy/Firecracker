@@ -95,7 +95,7 @@ public static final int SIZE = 5;
             // print whitespace
             System.out.print("  ");
             //  for SIZE times {
-            for (int i = 1; i <= SIZE; i++) {
+            for (int i = 1; i <= SIZE - 1; i++) {
                 //      System.out.print("| - ");
                 System.out.print("|-");
             }
