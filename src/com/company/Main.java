@@ -102,7 +102,9 @@ public static final int SIZE = 5;
             //  System.out.println("|");
             System.out.println("|");
         }
-        //}
+        // call base function
+
+        base();
     }
 
     public static void lower() {
