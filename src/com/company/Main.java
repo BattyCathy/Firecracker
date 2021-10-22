@@ -1,18 +1,38 @@
 package com.company;
 
 public class Main {
-public static final int SIZE = 10;
+public static final int SIZE = 5;
     public static void main(String[] args) {
 	top();
+    upper();
     }
 
     //Note: Every line (including whitespace) is 2 * SIZE + 3 characters long
     public static void base() {
+
         //print("[=")
+        System.out.print("[=");
+
         //for SIZE number of times print("I=");
+
+        for (int i = 1; i <= SIZE; i++) {
+            System.out.print("I=");
+        }
         //print("]");
-        //for 2 * SIZE + 3 number of times
+
+        System.out.print("]");
+
+        // line break
+
+        System.out.println();
+
+        //forSIZE  + 3 number of times
         //print("=")
+
+        for (int i = 1; i <= 2 * SIZE + 3; i++) {
+            System.out.print("=");
+        }
+        System.out.println();
     }
     public static void top() {
     //rough pseudocode:
@@ -59,16 +79,29 @@ public static final int SIZE = 10;
             System.out.println();
         }
 
+        // call base function
+
+        base();
+
 
 
     }
 
     public static void upper(){
         //for SIZE - 2 number of times {
-        //  for SIZE times {
-        //      System.out.print("| - ");
-        //  System.out.println("|");
 
+        for (int lines = 1; lines <= SIZE -2; lines++) {
+
+            // print whitespace
+            System.out.print("  ");
+            //  for SIZE times {
+            for (int i = 1; i <= SIZE; i++) {
+                //      System.out.print("| - ");
+                System.out.print("| - ");
+            }
+            //  System.out.println("|");
+            System.out.println("|");
+        }
         //}
     }
 
