@@ -97,7 +97,7 @@ public static final int SIZE = 5;
             //  for SIZE times {
             for (int i = 1; i <= SIZE; i++) {
                 //      System.out.print("| - ");
-                System.out.print("| - ");
+                System.out.print("|-");
             }
             //  System.out.println("|");
             System.out.println("|");
